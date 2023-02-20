@@ -41,15 +41,15 @@ Reader.init = () => {
   }
   
   function startCapture(limits) {
-  	navigator.mediaDevices.getUserMedia(limits).then((stream) => {
-    	Reader.webcam.srcObject = stream;
+    navigator.mediaDevices.getUserMedia(limits).then((stream) => {
+      Reader.webcam.srcObject = stream;
       Reader.webcam.setAttribute('playsinline', true);
       Reader.webcam.setAttribute('controls', true);
       setTimeout(() => {
-      	document.querySelector('video').removeAttribute('controls');
+        document.querySelector('video').removeAttribute('controls');
       });
     }).catch((err) => {
-    	console.log('Error occurred ', err);
+      console.log('Error occurred ', err);
     })
   }
   
