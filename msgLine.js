@@ -15,7 +15,7 @@ msgLine.notify = (msg, interval = 5000) => {
   msgLineEle.appendChild(text);
   
   // Show msg for interval units then turn off
-  setTimeout(() = > {
+  setTimeout(() => {
     text.remove();
   }, interval);
 }
