@@ -8,13 +8,13 @@ window.addEventListener('DOMContentLoaded', () => {
   
   var returnText = null;
   var textBoxEle = document.querySelector('#result');
-  var resultEle = document.querySelector('result');
-  var resultOverlayEle = document.querySelector('result-overlay');
-  var resultOpenBtn = document.querySelector('result-open');
-  var resultCloseBtn = document.querySelector('result-close');
+  var resultEle = document.querySelector('.result');
+  var resultOverlayEle = document.querySelector('.result-overlay');
+  var resultOpenBtn = document.querySelector('.result-open');
+  var resultCloseBtn = document.querySelector('.result-close');
   
-  var infoEle = document.querySelector('info');
-  var infoOverlayEle = document.querySelector('info-overlay');
+  var infoEle = document.querySelector('.info');
+  var infoOverlayEle = document.querySelector('.info-overlay');
   var helpTextEle = document.querySelector('.help-text');
   var headerIcon = document.querySelector('.header-icon');
   var infoCloseBtn = document.querySelector('info-close');
