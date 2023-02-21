@@ -290,7 +290,7 @@ video {
   text-align: center;
 }
 
-.snackbar {
+.msgLine {
   position: fixed;
   bottom: 15px;
   left: 20px;
@@ -298,7 +298,7 @@ video {
   z-index: 9999;
 }
 
-.snackbar-msg {
+.msgLine-msg {
   width: 250px;
   min-height: 50px;
   background-color: #404040;
@@ -326,11 +326,11 @@ video {
   z-index: 9999;
 }
 
-.snackbar--hide {
+.msgLine--hide {
   opacity: 0;
 }
 
-.infodialog,
+.info,
 .result {
   z-index: 12;
   background-color: #fff;
@@ -347,32 +347,32 @@ video {
   box-shadow: 0 9px 46px 8px rgba(0,0,0,.14), 0 11px 15px -7px rgba(0,0,0,.12), 0 24px 38px 3px rgba(0,0,0,.2);
 }
 
-.infodialog {
+.info {
   max-width: 480px;
   width: 95%;
   height: 240px;
 }
 
 .result-content,
-.infodialog-content {
+.info-content {
   width: 100%;
   padding: 15px;
 }
 
-.infodialog-subcontent {
+.info-subcontent {
   margin-top: 18px;
 }
 
-.infodialog-subcontent a {
+.info-subcontent a {
   color: #1b1eb5;
 }
 
-.infodialog-subcontent p:not(:first-child) {
+.info-subcontent p:not(:first-child) {
   margin-top: 10px;
 }
 
 .result-content h1,
-.infodialog h1 {
+.info h1 {
   margin-top: 5px;
   margin-bottom: 15px;
   font-weight: 600;
@@ -391,15 +391,15 @@ video {
 }
 
 .result-actions,
-.infodialog-actions {
+.info-actions {
   display: block;
   position: absolute;
   bottom: 13px;
   right: 20px;
 }
 
-.infodialog-open,
-.infodialog-close,
+.info-open,
+.info-close,
 .result-open,
 .result-close {
   border: 0;
@@ -417,14 +417,14 @@ video {
   display: none;
 }
 
-.infodialog-open:active,
-.infodialog-close:active,
+.info-open:active,
+.info-close:active,
 .result-open:active,
 .result-close:active {
   opacity: 0.9;
 }
 
-.infodialog--hide,
+.info--hide,
 .result--hide {
   display: none;
 }
@@ -481,7 +481,7 @@ video {
 }
 
 .result-overlay,
-.infodialog-overlay {
+.info-overlay {
   position: fixed;
   left: 0;
   right: 0;
@@ -541,11 +541,11 @@ input[type='file'] {
 }
 
 @media screen and (max-width: 480px) {
-  .infodialog {
+  .info {
     width: 90%;
   }
 
-  .infodialog-content {
+  .info-content {
     padding: 12px 13px;
   }
 }
