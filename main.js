@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // set camera overlay size
     setTimeout(() => {
       window.overlay.style.borderStyle = 'solid';
-      if (window.isMediaStreamAPISupported) scan();
+      // if (window.isMediaStreamAPISupported) scan();
     }, 1000);
   });
   
@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
     textBoxEle.value = '';
     resultEle.classList.add('result--hide');
     resultOverlayEle.classList.add('result--hide');
-    scan();
+    // scan();
   }
   
   headerIcon.addEventListener('click', () => {
