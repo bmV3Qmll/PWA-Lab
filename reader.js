@@ -1,3 +1,5 @@
+import msgLine from './msgLine.js'
+
 var Reader = {
   "active": false,
   "canvas": null,
@@ -10,7 +12,7 @@ Reader.setCanvas = () => {
   Reader.ctx = Reader.canvas.getContext('2d');
 }
 
-function setPhotoSourceToScan(selectedPhotos){
+function setScanSource(selectedPhotos){
 	if (!selectedPhotos && window.isMediaStreamAPISupported) {
   	Reader.webcam = document.querySelector('video');
   } else {
@@ -19,11 +21,8 @@ function setPhotoSourceToScan(selectedPhotos){
 }
 
 Reader.init = () => {
-	var baseurl = '';
   var streaming = false;
-  
-  setPhotoSourceToScan();
-  
+  setScanSource();
   Reader.setCanvas();
   
   if (window.isMediaStreamAPISupported) {
@@ -41,7 +40,8 @@ Reader.init = () => {
   }
   
   function startCapture(limits) {
-    navigator.mediaDevices.getUserMedia(limits).then((stream) => {
+    navigator.mediaDevices.getUserMedia(limits) // ask user to open webcam
+      .then((stream) => { // async
       Reader.webcam.srcObject = stream;
       Reader.webcam.setAttribute('playsinline', true);
       Reader.webcam.setAttribute('controls', true);
@@ -56,7 +56,7 @@ Reader.init = () => {
   if (window.isMediaStreamAPISupported) {
  		navigator.mediaDevices.enumerateDevices().then((devices) => {
     	var device = devices.filter((device) => {
-        if (device.kind == "videoinput") {return device;}
+        if (device.kind == "videoinput") return device;
       });
       var limits;
       if (device.length > 1) {
@@ -100,14 +100,14 @@ Reader.init = () => {
   }
 };
 
-Reader.scan = (selectedPhotos) => {
+Reader.scan = (callback, selectedPhotos) => {
 	Reader.active = true;
   Reader.setCanvas();
   setTimeout(() => {
-  	setPhotoSourceToScan(selectedPhotos);
+  	setScanSource(selectedPhotos);
   });
   
-  function newDecoderFrame() {
+  function getFrame() {
   	if (!Reader.active) return;
     try {
     	Reader.ctx.drawImage(Reader.webcam, 0, 0, Reader.canvas.width, Reader.canvas.height);
@@ -115,7 +115,9 @@ Reader.scan = (selectedPhotos) => {
     } catch (e) {}
   }
   
-  newDecoderFrame();
-}
+  getFrame();
+  
+  callback('Testing');
+};
 
-console.log(Reader.active)
+export default Reader;
