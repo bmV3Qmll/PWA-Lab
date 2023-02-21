@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="bundle.css">
   </head>
   <body>
-    <div class="app__layout">
+    <div class="layout">
       <!-- Header -->
-      <header class="app__header">
-        <span class="app__header-icon">
+      <header class="header">
+        <span class="header-icon">
           <svg fill="#FFFFFF" height="27" viewBox="0 0 24 24" width="27" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none" />
             <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z" />
@@ -21,50 +21,50 @@
         </span>
       </header>
 
-      <main class="app__layout-content">
+      <main class="layout-content">
         <video autoplay></video>
 
-        <!-- Dialog for result  -->
-        <div class="app__dialog app__dialog--hide">
-          <div class="app__dialog-content">
+        <!-- Result -->
+        <div class="result result--hide">
+          <div class="result-content">
             <h1>QR Code</h1>
             <input type="text" id="result">
           </div>
-          <div class="app__dialog-actions">
-            <button type="button" class="app__dialog-open">Open</button>
-            <button type="button" class="app__dialog-close">Close</button>
+          <div class="result-actions">
+            <button type="button" class="result-open">Open</button>
+            <button type="button" class="result-close">Close</button>
           </div>
         </div>
 
-        <div class="app__dialog-overlay app__dialog--hide"></div>
+        <div class="result-overlay result--hide"></div>
 
-        <!-- Info Dialog  -->
-        <div class="app__infodialog app__infodialog--hide">
-          <div class="app__infodialog-content">
+        <!-- Info -->
+        <div class="info info--hide">
+          <div class="info-content">
             <h1>About</h1>
-            <p>QR Code Scanner is the fastest and most user-friendly progressive web application.</p>
-            <div class="app__infodialog-subcontent">
-              <p><strong>Author:</strong> <a href="https://github.com/gokulkrishh" rel="noreferrer noopener">Gokulakrishnan Kalaikovan</a></p>
-              <p><strong>Source:</strong> <a href="https://github.com/gokulkrishh/qrcodescan.in" rel="noreferrer noopener">Github</a></p>
-              <p><strong>Donate:</strong> <a href="https://www.paypal.me/gokulkrishh" rel="noreferrer noopener">PayPal</a></p>
+            <p>Scanner for the project</p>
+            <div class="info-subcontent">
+              <p><strong>Author:Group 7</p>
+              <p><strong>Source:...</p>
+              <p><strong>Contact:...</p>
             </div>
-            <span class="app__version">v1.0.2</span>
+            <span class="version">v1.0.1</span>
           </div>
-          <div class="app__infodialog-actions">
-            <button type="button" class="app__infodialog-close">Close</button>
+          <div class="info-actions">
+            <button type="button" class="info-close">Close</button>
           </div>
         </div>
 
-        <div class="app__infodialog-overlay app__infodialog--hide"></div>
+        <div class="info-overlay info--hide"></div>
 
         <!-- Snackbar -->
-        <div class="app__snackbar"></div>
+        <div class="snackbar"></div>
       </main>
     </div>
-    <div class="app__overlay">
-      <div class="app__overlay-frame"></div>
+    <div class="overlay">
+      <div class="overlay-frame"></div>
       <!-- Scanner animation -->
-      <svg class="app__scanner-img"  width="310" height="310" viewBox="0 0 215 215" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg class="scanner-img"  width="310" height="310" viewBox="0 0 215 215" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Artboard" transform="translate(-146.000000, -58.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <g id="scanner" transform="translate(146.000000, 58.000000)">
@@ -75,9 +75,9 @@
       </svg>
       <div class="custom-scanner">
       </div>
-      <div class="app__help-text"></div>
+      <div class="help-text"></div>
     </div>
-    <div class="app__select-photos">
+    <div class="select-photos">
       <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
         <defs>
           <path id="a" d="M24 24H0V0h24v24z" />
