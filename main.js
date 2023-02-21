@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   var infoOverlayEle = document.querySelector('.info-overlay');
   var helpTextEle = document.querySelector('.help-text');
   var headerIcon = document.querySelector('.header-icon');
-  var infoCloseBtn = document.querySelector('info-close');
+  var infoCloseBtn = document.querySelector('.info-close');
   
   var scanningEle = document.querySelector('.custom-scanner');
   var scanImgEle = document.querySelector('.scanner-img');
