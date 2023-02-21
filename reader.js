@@ -88,7 +88,7 @@ Reader.init = () => {
           limits.video.facingMode = 'environment';
         }
         
-        if (!constraints.video.mandatory.sourceId && !window.iOS) {
+        if (!limits.video.mandatory.sourceId && !window.iOS) {
           startCapture({ video: true });
         } else {
         	startCapture(limits);
